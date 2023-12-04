@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Guess Number Game</title>
+</head>
+<body>
+    <script>
+    let secretNumber = Math.floor(Math.random() * 99) + 1;
+    let attempts = 0;
+    let player1Number = prompt("ผู้เล่นคนแรก กรุณาเลือกตัวเลข (1 - 99):");
+    let actualNumber = parseInt(player1Number);
+    if (!isNaN(actualNumber) && actualNumber >= 1 && actualNumber <= 99) {
+        while (true) {
+            let player2Guess = prompt("ผู้เล่นคนที่สอง ทายตัวเลข (1 - 99):");
+            if (player2Guess === null) {
+                alert("เกมถูกยกเลิก");
+                break;
+            }
+            let player2Number = parseInt(player2Guess);
+            if (!isNaN(player2Number) && player2Number >= 1 && player2Number <= 99) {
+                attempts++;
+                if (player2Number === secretNumber) {
+                    alert("ยินดีด้วย! คุณทายถูกต้อง! ตัวเลขที่ถูกต้องคือ " + secretNumber + " จำนวนครั้งที่ทาย: " + attempts);
+                    break;
+                } else {
+                    alert("ทายไม่ถูก! ตัวเลขที่ทายมากกว่าหรือน้อยกว่า " + player2Number);
+                    if (player2Number > secretNumber) {
+                        alert("คำตอบถูกต้องน้อยกว่า");
+                    } else {
+                        alert("คำตอบถูกต้องมากกว่า");
+                    }
+                }
+            } else {
+                alert("โปรดป้อนตัวเลขที่ถูกต้อง");
+            }
+        }
+    } else {
+        alert("โปรดป้อนตัวเลขที่ถูกต้อง");
+    }
+
+    </script>
+</body>
+</html>

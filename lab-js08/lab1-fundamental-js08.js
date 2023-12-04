@@ -1,0 +1,14 @@
+let animals = ['Dog', 'Cat', 'Rat'];
+console.log(animals);
+animals[3] = 'Fish';
+console.log(animals);
+animals.unshift('Horse');
+console.log(animals);
+animals.push('Giraffe', 'Snake');
+console.log(animals);
+delete animals[0];
+console.log(animals);
+delete animals[6];
+console.log(animals);
+delete animals[1];
+console.log(animals);

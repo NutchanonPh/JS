@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 4 Algorithm</title>
+</head>
+<body>
+    <script>
+        function isPrime(number) {
+            if (number <= 1) {
+                return false;
+            }
+            for (let i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        const numToCheck = prompt('enter number');
+        if (isPrime(numToCheck)) {
+            alert(numToCheck + 'เป็นจำนวนเฉพาะ');
+        } else {
+            alert(numToCheck + "ไม่เป็นจำนวนเฉพาะ");
+        }
+    </script>
+</body>
+</html>

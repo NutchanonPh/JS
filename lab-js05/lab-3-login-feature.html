@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3 Login Frature</title>
+</head>
+<body>
+    <script>
+        function login () {
+            let username = prompt("กรุณาใส่ username");
+            if ( username == 'admin') {
+                let password = prompt("กรุณาใส่รหัสผ่าน");
+                if ( password == 'P@ssw0rd') {
+                    alert('login สำเร็จ');
+                } else {
+                    alert('login ไม่สำเร็จ');
+                }
+            } else {
+                alert('กรุณาใส่ชื่อ , รหัสผ่านที่ถูกต้อง');
+            }
+        }
+        login();
+    </script>
+</body>
+</html>

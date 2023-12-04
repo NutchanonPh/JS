@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 8</title>
+</head>
+<body>
+    <script>
+        let score = prompt("Enter Your Score");
+        score = parseFloat(score);
+        if (score >=0 && score <=100) {
+            let grade;
+            if (score >=80) {
+                grade = ("A");
+            } else if (score >=70) {
+                grade = ("B");
+            } else if (score >=60) {
+                grade = ("C");
+            } else if (score >=50) {
+                grade = ("D");
+            } else {
+                grade = ("F");
+            }
+            alert ("Your Grade Is: " + grade);
+        }
+    </script>
+</body>
+</html>

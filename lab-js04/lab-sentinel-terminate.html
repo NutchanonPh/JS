@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Sentinel, Terminate Condition</title>
+</head>
+<body>
+    <script>
+        let numbers = [];
+        let userInput;
+        do {
+            userInput = prompt("Enter Your Number");
+            if (userInput === '0' || userInput.toLowerCase() === 'cancel' || userInput.toLowerCase() === 'esc' || userInput === '') {
+        break;
+        }
+            let num = parseFloat(userInput);
+            if (!isNaN(num)) {
+            numbers.push(num);
+        } else {
+            alert("Enter Only Number");
+        }
+        } while (true);
+        let sum = numbers.reduce((acc, num) => acc + num, 0);
+        let average = numbers.length > 0 ? sum / numbers.length : 0;
+        console.log("Sum = " + sum);
+        console.log("Average = " + average);
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 12 Refractor</title>
+</head>
+<body>
+    <script>
+        let score = prompt("Enter Your Score");
+        score = parseFloat(score);
+
+        let grade = 
+        (score >= 0 && score <= 100) ? 
+            (score >= 80 ? "A" :
+            (score >= 70 ? "B" :
+                (score >= 60 ? "C" :
+                (score >= 50 ? "D" : "F")
+                )
+            )
+            ) : 
+            undefined;
+
+        if (grade !== undefined) {
+        alert("Your Grade Is: " + grade);
+        } else {
+        alert("Invalid score. Please enter a score between 0 and 100.");
+        }
+    </script>
+</body>
+</html>

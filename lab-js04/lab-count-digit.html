@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Digit</title>
+</head>
+<body>
+    <script>
+        let inputNum = prompt('Enter Your Number');
+            if (inputNum !== null) {
+                let number = parseFloat(inputNum);
+                if (!isNaN(number)) {
+                    let digitCount = 0;
+                    let absNum = Math.abs(number);
+                    while (absNum >= 1) {
+                        absNum /= 10;
+                        digitCount++;
+                    }
+                    alert (`number: ${number} = ${digitCount}`);
+                }
+            }
+    </script>
+</body>
+</html>

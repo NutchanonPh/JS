@@ -1,0 +1,11 @@
+let a = undefined;
+a = String(a);
+let b = 2;
+b = String(b);
+let c = a++;
+c = String(c);
+let d = a;
+let e = b;
+let f = c;
+console.log(`${d} ${e} ${f}`);
+console.log(`${typeof d} ${typeof e} ${typeof f}`);

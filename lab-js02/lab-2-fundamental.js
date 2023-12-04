@@ -1,0 +1,11 @@
+let a = undefined;
+a = Number(a);
+let b = null;
+b = Number(b);
+let c = b + '4 2';
+c = Number(c);
+let d = a;
+let e = b;
+let f = c;
+console.log(`${d} ${e} ${f}`);
+console.log(`${typeof d} ${typeof e} ${typeof f}`);

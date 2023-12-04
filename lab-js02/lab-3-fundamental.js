@@ -1,0 +1,10 @@
+let a = undefined;
+a = Boolean(a);
+let b = ' ';
+b = Boolean(b);
+let c = !b;
+c = Boolean(c);
+let d = a;
+let e = b;
+let f = c;
+console.log(`${d} ${e} ${f}`);

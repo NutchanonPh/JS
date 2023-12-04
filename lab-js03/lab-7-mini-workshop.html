@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 7 Mini workshop</title>
+</head>
+<body>
+    <script>
+        let username = prompt('Enter Your Username');
+        username = username.trim() == "" || username == null ? "guest" : username;
+        if (username == "admin") {
+            let password = prompt("Enter Your Password");
+            if (password == "1234") {
+                alert("Welcome, " + username);
+            } else {
+                alert("Wrong Password");
+            }
+        } else if (username == "john") {
+            let password = prompt("Enter Your Password");
+            if (password == "qwerty") {
+                alert("Welcome, " + username);
+            } else {
+                alert ("Wrong Password");
+            }
+        } else {
+            username = "guest";
+            alert("Username is required");
+        }
+    </script>
+</body>
+</html>

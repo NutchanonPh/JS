@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login System</title>
+</head>
+<body>
+    <script>
+        let user = prompt("Enter your name:");
+        user = user.trim() == "" || user == null ? "guest" : user;
+        if (user == "codecamp") {
+            let password = prompt("Enter your password");
+            if (password == "123456") {
+                alert("Welcome, " + user);
+            } else {
+                alert("Wrong password");
+            }
+        } else {
+            user = "guest";
+            alert("Welcome, " + user);
+        }
+    </script>
+</body>
+</html>
